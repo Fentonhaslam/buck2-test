@@ -23,14 +23,15 @@ execution_strategy = remote
 
 # execution_platforms = prelude//platforms:default
 
+target_platform = //:linux_x86_64
 execution_platforms = root//:platforms
 
 [project]
 ignore = .git
 
 [buck2_re_client]
-action_cache_address = grpc://localhost:50052
-engine_address = grpc://localhost:50052
-cas_address = grpc://localhost:50052
+action_cache_address = grpc://0.0.0.0:30051
+engine_address = grpc://0.0.0.0:30051
+cas_address = grpc://0.0.0.0:30051
 tls = false
 instance_name = main
