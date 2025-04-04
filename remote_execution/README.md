@@ -10,7 +10,7 @@ To use Buck2 in combination with NativeLink, follow these steps:
 
 To deploy NativeLink on your own machine:
 
-1. Clone the `crates-pro/crates-pro-infra` repository and navigate to this directory.
+1. Clone the repository and navigate to this directory.
 2. Build and run a Docker image for NativeLink:
 
 ```bash

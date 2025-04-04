@@ -30,7 +30,10 @@ WORKDIR /workdir
 RUN curl -L -o swagger-ui-5.17.14.zip https://github.com/swagger-api/swagger-ui/archive/refs/tags/v5.17.14.zip \
     && unzip -j swagger-ui-5.17.14.zip "swagger-ui-5.17.14/dist/*" -d ./swagger-ui-5.17.14-dist \
     && rm -f swagger-ui-5.17.14.zip
+
 RUN rustup target add aarch64-apple-darwin
+RUN rustup target add x86_64-unknown-linux-gnu
+
 
 COPY basic_cas.json5 .
 CMD ["nativelink", "./basic_cas.json5"]
